@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "esphomedocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[zh-cn]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome 可以把 ESP32/ESP8266 开发板变成家庭自动化设备：写一份简短的 YAML，构建器会编译并 OTA 刷写固件，设备就能接入 Home Assistant。本应用在你的 NAS 上运行 ESPHome 设备构建器——项目、密钥与编译产物都保存在应用数据目录，不需要在电脑上装工具链。"
+release_note = "1. 首个版本：基于 Docker Hub 的 ESPHome 2026.10.2，以非 root 容器运行。设备构建器，支持 YAML 编辑、OTA 编译刷写，项目保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。新建设备、编辑 YAML 后点「安装」即可；首次编译会下载 PlatformIO 工具链，需要几分钟。项目与编译缓存在 DockerAppData/esphomedocker/config，可能增长到数 GB。刷写要求设备能被 NAS 访问（走 OTA）；本包不做 USB 透传，请用 OTA。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。"
+
+[zh-hk]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome 可以把 ESP32/ESP8266 開發板變成家庭自動化裝置：寫一份簡短的 YAML，建構器會編譯並 OTA 刷寫韌體，裝置就能接入 Home Assistant。本應用在你的 NAS 上運行 ESPHome 裝置建構器——專案、密鑰與編譯產物都保存在應用資料目錄，不需要在電腦上裝工具鏈。"
+release_note = "1. 首個版本：基於 Docker Hub 的 ESPHome 2026.10.2，以非 root 容器運行。裝置建構器，支援 YAML 編輯、OTA 編譯刷寫，專案保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。新增裝置、編輯 YAML 後按「安裝」即可；首次編譯會下載 PlatformIO 工具鏈，需要幾分鐘。專案與編譯快取在 DockerAppData/esphomedocker/config，可能增長到數 GB。刷寫要求裝置能被 NAS 存取（走 OTA）；本包不做 USB 透傳，請用 OTA。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。"
+
+[fr-fr]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[de-de]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[it-it]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[es-es]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[hu-hu]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ja-jp]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ko-kr]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pl-pl]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ru-ru]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[tr-tr]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pt-pt]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ar-sa]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[cs-cz]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[he-il]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[id-id]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nb-no]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nl-nl]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[sv-se]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[th-th]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[vi-vn]
+name         = "ESPHome"
+auth         = "esphome"
+version      = "@@VERSION@@"
+descript     = "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed."
+release_note = "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+

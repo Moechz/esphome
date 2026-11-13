@@ -1,0 +1,111 @@
+{
+  "app_id": "esphomedocker",
+  "title": "ESPHome",
+  "image": "esphome/esphome:2026.10.2",
+  "repo_name": "esphome",
+  "mode": "plain",
+  "container_port": 6052,
+  "category": [
+    "Web_Services"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/esphomedocker/config",
+      "container": "/config"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "esphome",
+  "upstream_url": "https://github.com/esphome/esphome",
+  "upstream_license": "Apache-2.0",
+  "descript": "ESPHome turns ESP32/ESP8266 boards into home-automation devices: write a short YAML file, let the builder compile and flash the firmware over the air, and the device shows up in Home Assistant. This package runs the ESPHome Device Builder on your NAS - projects, secrets and compiled firmware stay in the application data folder, and no desktop toolchain is needed.",
+  "release_note": "1. First release: ESPHome 2026.10.2 from Docker Hub as a non-root container. Device Builder with YAML editor, OTA compile/flash pipeline and project storage in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Create a device, edit its YAML and press Install - the first compile downloads PlatformIO toolchains and takes several minutes. Projects and build caches live in DockerAppData/esphomedocker/config and can grow to a few GB. Flashing needs the device to be reachable from the NAS (OTA) or a USB device passed through, which this package does not do - use OTA. Plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/entrypoint.sh"
+    ],
+    "cmd": [
+      "dashboard",
+      "/config"
+    ],
+    "exposed_ports": [
+      6052
+    ],
+    "declared_volumes": [
+      "/config"
+    ],
+    "image_healthcheck": [
+      "CMD-SHELL",
+      "curl --fail http://localhost:6052/version -A \"HealthCheck\" || exit 1"
+    ],
+    "digest": "esphome/esphome@sha256:c994a49a945094643b14c213bfd500a95ffed94cd68848772828192e126bd375",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": true,
+      "http_code": "200",
+      "state": "running",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "e_builder.helpers.peer_link_identity] Generated new peer-link identity at /config/.device-builder-peer-link-key.bin\u001b[0m\n\u001b[32m2026-11-13 18:22:55.789 INFO (dashboard_0) [esphome_device_builder.helpers.peer_link_identity] Loaded peer-link identity from /config/.device-builder-peer-link-key.bin (size=32 mtime=1794594176 pub=fc3af6e82b8d1971ba864d5094835d8ca56dc2f7170f48f1277c9cdd2e78a72d pin=6637de263d96cf8efac53b616aa7e8da23342aef37a78fd76a92aec84fd18e5b)\u001b[0m\n\u001b[32m2026-11-13 18:22:55.802 INFO (MainThread) [esphome_device_builder._remote_build_lifecycle] Remote-build peer-link site listening on 0.0.0.0:6055 (peer-link pin 66 37 de 26 3d 96 cf 8e fa c5 3b 61 6a a7 e8 da 23 34 2a ef 37 a7 8f d7 6a 92 ae c8 4f d1 8e 5b)\u001b[0m\n\u001b[32m2026-11-13 18:22:55.807 INFO (MainThread) [esphome_device_builder.device_builder] Device Builder ready — config dir: /config, 112 commands registered\u001b[0m\n\u001b[32m2026-11-13 18:22:55.807 INFO (MainThread) [esphome_device_builder.device_builder] Startup phases: total=3.7s (early=0.0s esphome=0.0s config=2.3s builder=1.3s settings=0.0s init=0.0s app=0.0s prefs=0.1s devices=0.0s firmware=0.0s editor=0.0s history=0.0s remote_build=0.0s controllers=0.0s)\u001b[0m\n\u001b[32m2026-11-13 18:22:56.005 INFO (dashboard_1) [esphome_device_builder.controllers.components._resolve] Featured-component registry built: 6599 entries\u001b[0m\n\u001b[32m2026-11-13 18:22:56.048 INFO (MainThread) [esphome_device_builder.controllers.firmware.controller] ESPHome CLI sanity check OK — Version: 2026.10.2\u001b[0m",
+      "files_in_mounts": "/tmp/tosdocker-trial-1794594170/config/.device-builder.json\n/tmp/tosdocker-trial-1794594170/config/.device-builder-peer-link-key.bin\n/tmp/tosdocker-trial-1794594170/config/.gitignore\n/tmp/tosdocker-trial-1794594170/config/.git/logs/refs/heads/master\n/tmp/tosdocker-trial-1794594170/config/.git/logs/HEAD"
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "esphome",
+      "repo": "esphome",
+      "description": "ESPHome is a system to control your ESP32, ESP8266, BK72xx, RP2040 by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+      "license": "NOASSERTION",
+      "homepage": "https://esphome.io/"
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:6052/ || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "esphomedocker",
+  "github_repo": "esphome",
+  "upstream_version": "2026.10.2",
+  "release_tag_prefix": "v",
+  "version": "2026.10.2-1",
+  "help": "https://github.com/Moechz/esphome/issues",
+  "official": "https://github.com/esphome/esphome",
+  "license": "Apache-2.0",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck_start_period": "90s",
+  "translations": {
+    "zh-cn": {
+      "descript": "ESPHome 可以把 ESP32/ESP8266 开发板变成家庭自动化设备：写一份简短的 YAML，构建器会编译并 OTA 刷写固件，设备就能接入 Home Assistant。本应用在你的 NAS 上运行 ESPHome 设备构建器——项目、密钥与编译产物都保存在应用数据目录，不需要在电脑上装工具链。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。新建设备、编辑 YAML 后点「安装」即可；首次编译会下载 PlatformIO 工具链，需要几分钟。项目与编译缓存在 DockerAppData/esphomedocker/config，可能增长到数 GB。刷写要求设备能被 NAS 访问（走 OTA）；本包不做 USB 透传，请用 OTA。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 ESPHome 2026.10.2，以非 root 容器运行。设备构建器，支持 YAML 编辑、OTA 编译刷写，项目保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "ESPHome 可以把 ESP32/ESP8266 開發板變成家庭自動化裝置：寫一份簡短的 YAML，建構器會編譯並 OTA 刷寫韌體，裝置就能接入 Home Assistant。本應用在你的 NAS 上運行 ESPHome 裝置建構器——專案、密鑰與編譯產物都保存在應用資料目錄，不需要在電腦上裝工具鏈。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。新增裝置、編輯 YAML 後按「安裝」即可；首次編譯會下載 PlatformIO 工具鏈，需要幾分鐘。專案與編譯快取在 DockerAppData/esphomedocker/config，可能增長到數 GB。刷寫要求裝置能被 NAS 存取（走 OTA）；本包不做 USB 透傳，請用 OTA。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 ESPHome 2026.10.2，以非 root 容器運行。裝置建構器，支援 YAML 編輯、OTA 編譯刷寫，專案保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/config` (mounted from `DockerAppData/esphomedocker/config`) holds the device YAML files, `secrets.yaml`, the ESPHome config and the PlatformIO build caches.",
+  "design_notes": [
+    "**Runs as uid 1000.** The image's dashboard works unprivileged; only `/config` is persistent.",
+    "**Compile in the container.** PlatformIO toolchains are downloaded on the first build and cached in the config volume."
+  ],
+  "limitations": [
+    "- No USB passthrough: flashing works over the network (OTA), not over a USB cable from the NAS.",
+    "- The first firmware compile downloads toolchains and can take several minutes; the build cache grows to hundreds of MB per target platform.",
+    "- The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+  ],
+  "host_port": 8032
+}
